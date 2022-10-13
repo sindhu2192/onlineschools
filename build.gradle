@@ -47,9 +47,13 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.16.Final"
     compile "org.grails.plugins:gsp"
     console "org.grails:grails-console"
+    //spring security core
+    compile "org.grails.plugins:spring-security-core:3.2.3"
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
-    runtime "com.h2database:h2"
+   // runtime "com.h2database:h2"
+    //Mysql
+    runtime "mysql:mysql-connector-java:5.1.46"
     runtime "org.apache.tomcat:tomcat-jdbc"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.15.1"
     testCompile "org.grails:grails-gorm-testing-support"

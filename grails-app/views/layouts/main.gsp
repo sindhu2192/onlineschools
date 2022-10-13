@@ -17,14 +17,32 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
-    <a class="navbar-brand" href="/#"><asset:image src="grails.svg" alt="Grails Logo"/></a>
+    <a class="navbar-brand" href="/#"><asset:image src="logo.png" alt="Grails Logo" width="100"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
         <ul class="nav navbar-nav ml-auto">
-            <g:pageProperty name="page.nav"/>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><g:link controller="course" action="index" >Course </g:link></li>
+                    <li class="dropdown-item"><g:link controller="subject" action="index" >Subject</g:link> </li>
+                    <li class="dropdown-item"><g:link controller="chapter" action="index" >Chapter </g:link></li>
+
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
+                        <li class="dropdown-item"><a href="#">${plugin.name} - ${plugin.version}</a></li>
+                    </g:each>
+                </ul>
+            </li>
         </ul>
     </div>
 
