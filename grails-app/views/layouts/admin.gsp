@@ -31,8 +31,9 @@
        #hero {
          width: 100%;
          height: 80vh;
-         background: url("../assets/img/hero-bg.jpg") top center;
+
          background-size: cover;
+         background-color: #FFFF00;
          position: relative;
        }
        </style>
@@ -56,13 +57,30 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-
-          <li><g:link uri="/">Home</g:link></li>
-          <li><g:link uri="/about">About</g:link></li>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html">Events</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
 
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -130,7 +148,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Admin</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->

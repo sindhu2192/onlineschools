@@ -6,18 +6,16 @@ import static org.springframework.http.HttpStatus.*
 class UserController {
 
     UserService userService
-    UserDashboardService userDashboardService
-
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond userDashboardService.list(params), model:[userCount: userService.count()]
+        respond userService.list(params), model:[userCount: userService.count()]
     }
 
     def show(Long id) {
-        respond userDashboardService.get(id),model:[userRole: userDashboardService.roles(id)]
+        respond userService.get(id)
     }
 
     def create() {
@@ -31,7 +29,7 @@ class UserController {
         }
 
         try {
-            userDashboardService.save(user)
+            userService.save(user)
         } catch (ValidationException e) {
             respond user.errors, view:'create'
             return
@@ -57,7 +55,7 @@ class UserController {
         }
 
         try {
-            userDashboardService.save(user)
+            userService.save(user)
         } catch (ValidationException e) {
             respond user.errors, view:'edit'
             return
