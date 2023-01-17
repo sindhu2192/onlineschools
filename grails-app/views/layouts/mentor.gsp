@@ -59,8 +59,8 @@
 
           <li><g:link uri="/">Home</g:link></li>
           <li><g:link uri="/about">About</g:link></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
+          <li><g:link uri="/courses">Courses</g:link></li>
+          <li><g:link uri="/trainers">Trainers</g:link></li>
           <li><a href="events.html">Events</a></li>
 
           <li><a href="contact.html">Contact</a></li>

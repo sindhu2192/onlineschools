@@ -15,6 +15,8 @@ class User implements Serializable {
     String mobile
     String username
     String password
+    String description
+    String featuredImage
     boolean enabled = true
     boolean accountExpired
     boolean accountLocked
@@ -25,6 +27,8 @@ class User implements Serializable {
     }
 
     static constraints = {
+        featuredImage nullable:true,blank:true
+        description nullable:true,blank:true
         password nullable: false, blank: false, password: true
         username nullable: false, blank: false, unique: true, email: true
         firstName matches: "[a-zA-Z]+"
