@@ -61,14 +61,12 @@
           <li><g:link uri="/about">About</g:link></li>
           <li><g:link uri="/courses">Courses</g:link></li>
           <li><g:link uri="/trainers">Trainers</g:link></li>
-          <li><a href="events.html">Events</a></li>
-
-          <li><a href="contact.html">Contact</a></li>
+          <li><g:link uri="/contact">Contact</g:link></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="courses.html" class="get-started-btn">Get Started</a>
+      <g:link uri="/courses" class="get-started-btn">Get Started</g:link>
 
     </div>
   </header><!-- End Header -->
